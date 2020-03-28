@@ -8,10 +8,10 @@ const orm = {
             console.log(result);
         });
     },
-    insertOne: (table_name, name) => {
-        const queryString = "INSERT INTO ?? VALUES (?)";
+    insertOne: (table_name, colName, inputName) => {
+        const queryString = "INSERT INTO ?? (??) VALUES (?)";
         console.log(queryString);
-        connection.query(queryString, [table_name, name], (err, result) => {
+        connection.query(queryString, [table_name, colName, inputName], (err, result) => {
             if (err) throw err;
             console.log(result);
         });
