@@ -22,8 +22,7 @@ const orm = {
         connection.query(queryString, [table_name, colName, updateValue, idColName, idValue], (err, result) => {
             if (err) throw err;
             cb(result);
-        }
-        );
+        });
     }
 };
 
